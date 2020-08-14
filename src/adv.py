@@ -49,7 +49,6 @@ def run ():
     running = True
     while running == True:
 # * Prints the current room name
-        current_room = player.current_room
         print("player room -", player.current_room.name)
     
 # * Prints the current description (the textwrap module might be useful here).
@@ -59,23 +58,23 @@ def run ():
 #
 # If the user enters a cardinal direction, attempt to move to the room there.
         if user_input == 'n':
-            if hasattr(current_room, "n_to"):
-                player.current_room = current_room.n_to
+            if hasattr(player.current_room, "n_to"):
+                player.current_room = player.current_room.n_to
             else:
                 print('There is no room in that direction')
         elif user_input == 'e':
-            if hasattr(current_room, "e_to"):
-                player.current_room = current_room.e_to
+            if hasattr(player.current_room, "e_to"):
+                player.current_room = player.current_room.e_to
             else:
                 print("Ouch, that's a wall")
         elif user_input == 's':
-            if hasattr(current_room, "s_to"):
-                player.current_room = current_room.s_to
+            if hasattr(player.current_room, "s_to"):
+                player.current_room = player.current_room.s_to
             else:
                 print("There is no room in that direction")
         elif user_input == 'w':
-            if hasattr(current_room, "w_to"):
-                player.current_room = current_room.w_to
+            if hasattr(player.current_room, "w_to"):
+                player.current_room = player.current_room.w_to
             else:
                 print("You walked into a wall")
         elif user_input == 'q':

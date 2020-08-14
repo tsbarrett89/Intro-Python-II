@@ -4,5 +4,5 @@ from room import Room
 
 class Player:
     def __init__(self, current_room, items):
-        self.current_room: current_room
-        self.items: items
+        self.current_room = current_room
+        self.items = items
