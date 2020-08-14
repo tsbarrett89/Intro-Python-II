@@ -3,5 +3,6 @@
 from room import Room
 
 class Player:
-    def __init__(self, current_room):
-        self.current_room: Room = current_room
+    def __init__(self, current_room, items):
+        self.current_room: current_room
+        self.items: items
